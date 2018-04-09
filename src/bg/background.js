@@ -65,6 +65,7 @@ function updateSearch(text, suggest) {
 		query.pinned = true;
 	}
 	if (hasType('full')) {
+		// don't think this is possible without a content script too
 		fullText = true;
 	}
 
@@ -74,7 +75,7 @@ function updateSearch(text, suggest) {
 			compoundText += tab.url;
 		}
 		if (fullText) {
-			compoundText += tab.
+			// compoundText += tab.
 		}
 		return compoundText.toLowerCase().indexOf(text.toLowerCase()) !== -1;
 	}
